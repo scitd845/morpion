@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morpion — Le jeu de morpion contre l'IA</title>
+<meta name="description" content="Morpion : jouez contre l'IA (3 niveaux), affrontez un ami en ligne et grimpez au classement mondial.">
+<style>
+:root{--bg:#1e1e2e;--card:#313244;--txt:#cdd6f4;--mut:#a6adc8;--x:#89b4fa;--o:#f38ba8}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+.w{max-width:760px;margin:0 auto;padding:0 20px}
+header{text-align:center;padding:56px 0 32px}
+.grid{display:grid;grid-template-columns:repeat(3,64px);gap:6px;justify-content:center;margin:0 auto 24px}
+.grid span{height:64px;background:var(--card);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:700}
+.x{color:var(--x)}.o{color:var(--o)}
+h1{margin:0 0 8px;font-size:2.4rem}
+h2{margin:40px 0 12px}
+p.lead{color:var(--mut);font-size:1.1rem;margin:0 auto 24px;max-width:520px}
+.btn{display:inline-block;background:var(--x);color:#11111b;font-weight:700;padding:12px 24px;border-radius:12px;text-decoration:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{background:var(--card);border-radius:14px;padding:16px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p{margin:0;color:var(--mut);font-size:.95rem}
+ol{padding-left:20px}
+footer{text-align:center;color:var(--mut);font-size:.9rem;padding:40px 0}
+a{color:var(--x)}
+</style>
+</head>
+<body>
+<div class="w">
+<header>
+  <div class="grid" aria-hidden="true">
+    <span class="x">X</span><span class="o">O</span><span class="x">X</span>
+    <span></span><span class="x">X</span><span class="o">O</span>
+    <span class="o">O</span><span></span><span class="x">X</span>
+  </div>
+  <h1>Morpion</h1>
+  <p class="lead">Le classique jeu de morpion : affrontez l'IA, jouez en ligne avec un ami et visez le haut du classement.</p>
+  <!-- TODO : remplacez par le lien de votre fiche Google Play -->
+  <a class="btn" href="https://play.google.com/store/apps/details?id=com.scitd.morpion">Télécharger sur Google Play</a>
+</header>
+
+<section>
+  <h2>Fonctionnalités</h2>
+  <div class="cards">
+    <div class="card"><h3>🤖 Contre l'IA</h3><p>Trois niveaux : Facile, Moyen et Difficile (imbattable).</p></div>
+    <div class="card"><h3>🌐 Partie en ligne</h3><p>Créez une partie, partagez le code et jouez à distance avec un ami.</p></div>
+    <div class="card"><h3>🏆 Classement</h3><p>Choisissez un pseudo et comparez vos résultats avec les autres joueurs.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Comment jouer</h2>
+  <ol>
+    <li>Vous jouez avec les <b class="x">X</b>, l'IA avec les <b class="o">O</b>.</li>
+    <li>Touchez une case vide pour placer votre symbole.</li>
+    <li>Alignez trois symboles (ligne, colonne ou diagonale) pour gagner.</li>
+  </ol>
+</section>
+
+<section id="confidentialite">
+  <h2>Politique de confidentialité</h2>
+  <p>Cette application affiche des publicités (Meta Audience Network), dont une vidéo récompensée à regarder toutes les 10 parties contre l'IA pour continuer à jouer. Le réseau publicitaire peut collecter des identifiants publicitaires et des données d'usage selon sa propre politique.</p>
+  <p>Pour le classement et le mode en ligne, le pseudo que vous choisissez, vos statistiques de jeu et un identifiant d'appareil (pour réserver le pseudo) sont enregistrés sur un serveur Firebase. Aucun nom, e-mail ni donnée de localisation n'est demandé par l'application.</p>
+  <p>Pour toute demande (suppression de pseudo, questions) : <!-- TODO --><a href="mailto:votre-adresse@exemple.com">votre-adresse@exemple.com</a>.</p>
+</section>
+
+<footer>© 2026 Morpion — com.scitd.morpion</footer>
+</div>
+</body>
+</html>
